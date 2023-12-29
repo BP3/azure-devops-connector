@@ -1,0 +1,415 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Azure Devops Connector",
+  "id": "c683e70f-0a0c-4977-8695-6664d987cb39",
+  "version": 1702997482342,
+  "description": "Get, create tasks and issues for your team in azure devops",
+  "icon": {
+    "contents": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAKrGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU+kSgP9700NCS4iAlNCbIJ0AUkJoAZRebYQkkFBCDAQBGyKLK7CiiIhgA12lKLgWQOyIYlsE7HVBFhFlFQs2VN4FDsHdd9575805c+bLZP6Z+f9z/3vmAkBW5IjFybAiACmidEmIjwc9KjqGjhsERKAFaIAB8BxumpgZFBQAEJm2f5cPdwA0YW+aT+T69///qyjx+GlcAKAghON4adwUhI8h+oIrlqQDgNqD+PWWp4snuB1hqgRpEOF7E5wwxcMTHDfJaDAZExbCQpgKAJ7E4UgSACDRET89g5uA5CG5I2wp4glFCIsRdk1JSeUhfBhhYyQG8ZEm8jPifsiT8LeccbKcHE6CjKf2Mil4T2GaOJmT9X8ex/+WlGTpdA1DREkCiW8IYpWRM7uXlOovY1HcgsBpFvIm4ydZIPUNn2ZuGitmmnkcT3/Z2uQFAdMcL/Rmy/Kks8OmmZ/mFTrNktQQWa14CYs5zRzJTF1pUrjML+CzZfmzBWGR05whjFgwzWlJof4zMSyZXyINkfXPF/l4zNT1lu09Je2H/QrZsrXpgjBf2d45M/3zRcyZnGlRst54fE+vmZhwWbw43UNWS5wcJIvnJ/vI/GkZobK16cgDObM2SHaGiRy/oGkGLJAKkhGVADoIQH55ApDOz0yf2AgrVZwlESYI0ulM5Ibx6WwR12IO3drS2gaAifs69Ti8o03eQ4h2dca3bj0ALrXj4+MnZ3z+AwAcfQ0A8fGMzygRAHkBAJe3cqWSjCnf5F3CIG8CBUAFasj7QA8YA3NgDeyBM3AHXsAPBIIwEA2WAC4QgBSk8+VgJVgL8kEh2AS2ggqwG+wFNeAQOAKawSlwHlwC10AXuA0egl4wAF6CEfABjEEQhIPIEAVSg7QhA8gMsoYYkCvkBQVAIVA0FAslQCJICq2E1kGFUAlUAVVBtdBv0AnoPHQF6obuQ33QEPQW+gKjYBJMhTVhQ3guzICZsD8cBi+GE+BlcDacB2+Ey+Fq+CDcBJ+Hr8G34V74JTyKAig5FA2lgzJHMVAsVCAqBhWPkqBWowpQZahqVAOqFdWBuonqRQ2jPqOxaAqajjZHO6N90eFoLnoZejW6CF2BrkE3odvRN9F96BH0dwwZo4Exwzhh2JgoTAJmOSYfU4bZjzmOuYi5jRnAfMBisTSsEdYB64uNxiZiV2CLsDuxjdhz2G5sP3YUh8Op4cxwLrhAHAeXjsvHbccdxJ3F9eAGcJ/wcnhtvDXeGx+DF+Fz8WX4OvwZfA9+ED9GUCQYEJwIgQQeIYtQTNhHaCXcIAwQxohKRCOiCzGMmEhcSywnNhAvEh8R38nJyenKOcoFywnlcuTK5Q7LXZbrk/tMUiaZklikRSQpaSPpAOkc6T7pHZlMNiS7k2PI6eSN5FryBfIT8id5iryFPFueJ79GvlK+Sb5H/pUCQcFAgamwRCFboUzhqMINhWFFgqKhIkuRo7hasVLxhOJdxVElipKVUqBSilKRUp3SFaXnyjhlQ2UvZZ5ynvJe5QvK/RQURY/ConAp6yj7KBcpA1Qs1YjKpiZSC6mHqJ3UERVlFVuVCJVMlUqV0yq9NBTNkMamJdOKaUdod2hfZmnOYs7iz9owq2FWz6yPqrNV3VX5qgWqjaq3Vb+o0dW81JLUNqs1qz1WR6ubqgerL1ffpX5RfXg2dbbzbO7sgtlHZj/QgDVMNUI0Vmjs1biuMaqppemjKdbcrnlBc1iLpuWulahVqnVGa0ibou2qLdQu1T6r/YKuQmfSk+nl9Hb6iI6Gjq+OVKdKp1NnTNdIN1w3V7dR97EeUY+hF69XqtemN6KvrT9ff6V+vf4DA4IBw0BgsM2gw+CjoZFhpOF6w2bD50aqRmyjbKN6o0fGZGM342XG1ca3TLAmDJMkk50mXaawqZ2pwLTS9IYZbGZvJjTbadY9BzPHcY5oTvWcu+Ykc6Z5hnm9eZ8FzSLAItei2eLVXP25MXM3z+2Y+93SzjLZcp/lQytlKz+rXKtWq7fWptZc60rrWzZkG2+bNTYtNm9szWz5trts79lR7Obbrbdrs/tm72AvsW+wH3LQd4h12OFwl0FlBDGKGJcdMY4ejmscTzl+drJ3Snc64vTa2dw5ybnO+fk8o3n8efvm9bvounBcqlx6Xemusa57XHvddNw4btVuT9313Hnu+90HmSbMROZB5isPSw+Jx3GPjywn1irWOU+Up49ngWenl7JXuFeF1xNvXe8E73rvER87nxU+53wxvv6+m33vsjXZXHYte8TPwW+VX7s/yT/Uv8L/aYBpgCSgdT4832/+lvmPFhgsEC1oDgSB7MAtgY+DjIKWBZ0MxgYHBVcGPwuxClkZ0hFKCV0aWhf6IcwjrDjsYbhxuDS8LUIhYlFEbcTHSM/IksjeqLlRq6KuRatHC6NbYnAxETH7Y0YXei3cunBgkd2i/EV3Fhstzlx8ZYn6kuQlp5cqLOUsPRqLiY2MrYv9ygnkVHNG49hxO+JGuCzuNu5LnjuvlDfEd+GX8AfjXeJL4p8nuCRsSRgSuAnKBMNClrBC+CbRN3F34sekwKQDSePJkcmNKfiU2JQTImVRkqg9VSs1M7VbbCbOF/cuc1q2ddmIxF+yPw1KW5zWkk5FBqPrUmPpT9K+DNeMyoxPyyOWH81UyhRlXs8yzdqQNZjtnf3rCvQK7oq2lTor167sW8VcVbUaWh23um2N3pq8NQM5Pjk1a4lrk9b+nmuZW5L7fl3kutY8zbycvP6ffH6qz5fPl+TfXe+8fvfP6J+FP3dusNmwfcP3Al7B1ULLwrLCr0Xcoqu/WP1S/sv4xviNncX2xbs2YTeJNt3Z7La5pkSpJLukf8v8LU2l9NKC0vdbl269UmZbtnsbcZt0W295QHnLdv3tm7Z/rRBU3K70qGzcobFjw46PO3k7e3a572rYrbm7cPeXPcI996p8qpqqDavL9mL3Zux9ti9iX8evjF9r96vvL9z/7YDoQG9NSE17rUNtbZ1GXXE9XC+tHzq46GDXIc9DLQ3mDVWNtMbCw+Cw9PCL32J/u3PE/0jbUcbRhmMGx3YcpxwvaIKasppGmgXNvS3RLd0n/E60tTq3Hj9pcfLAKZ1TladVThefIZ7JOzN+Nvvs6DnxueHzCef725a2PbwQdeFWe3B750X/i5cveV+60MHsOHvZ5fKpK05XTlxlXG2+Zn+t6brd9eO/2/1+vNO+s+mGw42WLseu1u553Wd63HrO3/S8eekW+9a12wtud98Jv3Pv7qK7vfd4957fT77/5kHGg7GHOY8wjwoeKz4ue6LxpPoPkz8ae+17T/d59l1/Gvr0YT+3/+WfaX9+Hch7Rn5WNqg9WPvc+vmpIe+hrhcLXwy8FL8cG87/S+mvHa+MXx177f76+kjUyMAbyZvxt0Xv1N4deG/7vm00aPTJh5QPYx8LPql9qvnM+NzxJfLL4Njyr7iv5d9MvrV+9//+aDxlfFzMkXAmRwEUonB8PABvDwBAjgaA0oXMDwun5ulJgaa+ASYJ/CeemrknxR6ABsRMjEWscwAcRtTQHcmdA8DESBTmDmAbG5lOz76Tc/qEYJEvlj2eE3R/y+Ic8A+ZmuF/6PufFkxktQX/tP8CqWwIACpyWV0AAABOZVhJZk1NACoAAAAIAAQBGgAFAAAAAQAAAD4BGwAFAAAAAQAAAEYBKAADAAAAAQACAAACEwADAAAAAQABAAAAAAAAAAAASAAAAAEAAABIAAAAAW/JI7oAAATwSURBVFgJ7VZLaFxVGP7uvTOTzGSSTCdPmzahaTS0totosrIiorhwIYoodOGiUAoVCy11IdiFCOLC16oWfIAIQkGLULSrqguLiI9FazeFPMxjZsxMOjOZTOZ15874/efmyvRObs2EQhD8aXPmPL/v/I/vXA2v3axjB03fQWwF/d8koG24bcjQ0LXRccZa9ei2PCBJEyJiLGshZwHDJFLn4HZItEzAIHiUSGMBDV+90IeHgzoWSGSc/e1k85YJdBJ01KdhQNeQLtRwY7aCxyd6cPXVMZw4EMSthKnmIw1ukMMlRPdxj98jNj6PceVOudEgN3fwpJlSDWu36e92DWcPh/Ds1C50BA20+XVcOLkfj15N4KUvU0Q0cH9IR5V7s1YdGbOOXKXGfToCPKfiAtQ20wG5hMR0N2MbXyfoeg1P7GvDsakuHDkcwchgSB0jBC2C+LhO7OZMDq9fSuDyTFn1hfmTvT5MDAbww2IZv9FzbhJNBBzwEbp7fs3C6UMhHH2kBwf3hREOejoMVRKp1er48UYaSysVTOwPo6fbj2hXAAF66fj5aXw2W0Yvs3eFDnGs6US51R4BX7Vw8mAQ7x0fha7ZN3Q2mdUaVvNVJDNlLCRLmI6X8Af/X4xVkMvXkH5rHLs6A85yRY78VJlI02hNBMLEWmLcDkUNvHl0WIHHkkWkshUFdotA12NlfLFsAiSJKo/0c1ObDoP5gTYNhZJFAgwPPWIwh8Tsv43Q9u8mAgOMZ37FxAcnhtAbCSCWKmHP2zNAkX4T10k6M6HAshvp8YHOUhxK5GExcVbY6g6oF2oDjyYC9hwznxn+j3HVA30+hV8mQIE3y7GdV361V8lq8V6r5kGAlyWImBP+OMGKHKLT76mJVniY6zoEd4147Gtt2JOAc3PRAwl0lLkhqtbOruem1rDV6qYQKMcTyJTspoXaGd20hQXJcMl2kunnUIgMRX9klaTCxnKstvgiNBGIyUkRA+e+WcaLc+vY2xfA+09FsJQxMZ2u4jqfv/k8M8FOeztJ5BQpB1aGylRh7jL7Oq5BdpsIiIiKXF4j0LXvskDGwpVTQzjz/DCKZQsl6nq+UEU2byKdM5FaNfEXycWyJl/FKi6mqA+boCm15jgp3mFNBGRWHowQbzQQ4QNCQXr64zh+paxOHogg2GZQZPzYOxC84yDpiEJ+SBFSYZMBIUJE0YW1Cju82EZxyawyz3wqcP0cg5uQkPT7MPXJEhaXi2qTU6LSkd/yINWZrX6fju6wX7WiggIs7YXLi7hEme5jHmWEVIN5EnDWiOAMibKxPfbpPENgocBQXPk5hWS6rEAM+ldjUkrFCKAjwasM0+mPZvDKtxkM8sMlRSV14cPAkZffcMA2ayVmOW4co/z+zo+OUKGMB0c68NA7c3j3lwxKsTxLwKJy6giHfOrtkMdrNr6O587P4es/KxinijaqZiNO03PcOOn8FhJyu2HmxQKT89xkGD8tlfG9PEb8UKE2q8o5Ox7EM5MRte2xzxMq/qP8OJnl4ya64r69LNwSAXuhfUA/w5EUQL56/Ico+/LFlGAerPMpVuUpDwNLuZ/jSXL0ApdzN60CmXCbwz7JGPfxVrfZSskm2Erty0G7Ow20d9vCtExCSY5LFTh73WdKf8sEGjenBNRl8g0Y3yDjmrpr91+r4K6778Hk/wR23AN/AwT+4nJRKsqNAAAAAElFTkSuQmCC"
+  },
+  "category": {
+    "id": "connectors",
+    "name": "Connectors"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "groups": [
+    {
+      "id": "authentication",
+      "label": "Authentication"
+    },
+    {
+      "id": "configuration",
+      "label": "Configuration"
+    },
+    {
+      "id": "operation",
+      "label": "Operation"
+    },
+    {
+      "id": "payload",
+      "label": "Payload"
+    },
+    {
+      "id": "input",
+      "label": "Input"
+    },
+    {
+      "id": "output",
+      "label": "Output"
+    },
+    {
+      "id": "errors",
+      "label": "Error handling"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda:http-json:1",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "type": "Hidden",
+      "label": "Type",
+      "id": "authenticationType",
+      "group": "authentication",
+      "value": "basic",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.type"
+      }
+    },
+    {
+      "type": "Hidden",
+      "label": "UserName",
+      "id": "username",
+      "group": "authentication",
+      "value": "xyz",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.username"
+      }
+    },
+    {
+      "type": "String",
+      "label": "Personal Access Token",
+      "id": "password",
+      "group": "authentication",
+      "description": "Personal Access Token",
+      "feel": "optional",
+      "value": "",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.password"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "group": "configuration",
+      "type": "Hidden",
+      "value": "={\"Content-Type\":\"application/json-patch+json\"}",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "headers"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "createWorkItem"
+        ]
+      }
+    },
+    {
+      "label": "Azure Devops Organization",
+      "description": "Name of the devops organization",
+      "group": "configuration",
+      "type": "String",
+      "feel": "optional",
+      "value": "",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "organization"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Project",
+      "description": "Project ID",
+      "group": "configuration",
+      "type": "String",
+      "feel": "optional",
+      "value": "",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "project"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Operation group",
+      "id": "operationGroup",
+      "group": "operation",
+      "description": "Choose operation group",
+      "value": "issue",
+      "type": "Dropdown",
+      "choices": [
+        {
+          "name": "Issue",
+          "value": "issue"
+        },
+        {
+          "name": "Task",
+          "value": "task"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "operationGroup"
+      }
+    },
+    {
+      "label": "Operation type",
+      "id": "operationType",
+      "group": "operation",
+      "type": "Dropdown",
+      "value": "getWorkItem",
+      "choices": [
+        {
+          "name": "Create Issue",
+          "value": "createWorkItem"
+        },
+        {
+          "name": "Get Issue",
+          "value": "getWorkItem"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "operationType"
+      },
+      "condition": {
+        "property": "operationGroup",
+        "oneOf": [
+          "issue"
+        ]
+      }
+    },
+    {
+      "label": "Operation type",
+      "id": "operationType",
+      "group": "operation",
+      "type": "Dropdown",
+      "value": "getWorkItem",
+      "choices": [
+        {
+          "name": "Create Task",
+          "value": "createWorkItem"
+        },
+        {
+          "name": "Get Task",
+          "value": "getWorkItem"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "operationType"
+      },
+      "condition": {
+        "property": "operationGroup",
+        "oneOf": [
+          "task"
+        ]
+      }
+    },
+    {
+      "id": "methodPost",
+      "group": "configuration",
+      "type": "Hidden",
+      "value": "post",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "method"
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "createWorkItem"
+        ]
+      }
+    },
+    {
+      "id": "methodGet",
+      "group": "configuration",
+      "type": "Hidden",
+      "value": "get",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "method"
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "getWorkItem"
+        ]
+      }
+    },
+    {
+      "label": "Work Item Id",
+      "description": "Id of the Work Item",
+      "group": "input",
+      "type": "String",
+      "feel": "optional",
+      "value": "",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "workItemId"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "getWorkItem"
+        ]
+      }
+    },
+    {
+      "label": "Title",
+      "description": "Title of the Work Item",
+      "group": "input",
+      "type": "String",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "title"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "createWorkItem"
+        ]
+      }
+    },
+    {
+      "label": "Result variable",
+      "description": "Name of variable to store the response in. Details in the <a href=\"https://docs.camunda.io/docs/components/connectors/use-connectors/#result-variable\" target=\"_blank\">documentation</a>",
+      "group": "output",
+      "feel": "optional",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "resultVariable"
+      }
+    },
+    {
+      "label": "Result expression",
+      "id": "resultExpression",
+      "description": "Expression to map the response into process variables. Details in the <a href=\"https://docs.camunda.io/docs/components/connectors/use-connectors/#result-expression\" target=\"_blank\">documentation</a>",
+      "group": "output",
+      "type": "String",
+      "feel": "required",
+      "value": "={workItem: response.body}",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "resultExpression"
+      }
+    },
+    {
+      "label": "Connection timeout",
+      "description": "Sets the timeout in seconds to establish a connection or 0 for an infinite timeout",
+      "group": "errors",
+      "type": "String",
+      "value": "20",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "connectionTimeoutInSeconds"
+      },
+      "optional": true,
+      "feel": "optional",
+      "constraints": {
+        "notEmpty": false,
+        "pattern": {
+          "value": "^(=.+|[0-9]+|\\{\\{secrets\\..+\\}\\})$",
+          "message": "Must be a timeout in seconds (default value is 20 seconds) or a FEEL expression"
+        }
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=[{ \"op\": \"add\", \"path\": \"/fields/System.Title\", \"from\": null, \"value\":   string(title)  }]",
+      "binding": {
+        "name": "body",
+        "type": "zeebe:input"
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "createWorkItem"
+        ]
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=\"https://dev.azure.com/\"",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "baseUrl"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=\"/_apis/wit/workitems/\"",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "workItemUrlSuffix"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=\"?api-version=7.1-preview.3\"",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "getWorkItemQueryString"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=baseUrl + organization  +\"/\" + project + workItemUrlSuffix + string(workItemId) + getWorkItemQueryString",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "url"
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "getWorkItem"
+        ]
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=baseUrl + organization  +\"/\" + project + workItemUrlSuffix +\"$\" + operationGroup + getWorkItemQueryString",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "url"
+      },
+      "condition": {
+        "property": "operationType",
+        "oneOf": [
+          "createWorkItem"
+        ]
+      }
+    },
+    {
+      "label": "Error expression",
+      "description": "Expression to handle errors. Details in the <a href=\"https://docs.camunda.io/docs/components/connectors/use-connectors/#bpmn-errors\" target=\"_blank\">documentation</a>",
+      "group": "errors",
+      "type": "Text",
+      "feel": "required",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "errorExpression"
+      }
+    }
+  ]
+}
